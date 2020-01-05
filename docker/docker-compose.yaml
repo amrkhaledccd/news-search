@@ -1,0 +1,42 @@
+version: '3'
+services:
+  search-service:
+    build: ../search-service/.
+    container_name: "news-search"
+    restart: on-failure
+    environment:
+      - spring.data.elasticsearch.cluster-nodes=elasticsearch:9300
+      - spring.data.elasticsearch.host=elasticsearch
+    depends_on:
+      - elasticsearch
+    ports:
+      - 8080:8080
+  search-app:
+    build: ../search-app/.
+    container_name: "news-app"
+    depends_on:
+      - search-service
+    ports:
+      - 3000:3000
+  elasticsearch:
+    image: elasticsearch:7.4.2
+    container_name: "elasticsearch"
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=es-docker-cluster
+      - cluster.initial_master_nodes=elasticsearch
+      - transport.tcp.port=9300
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+      - 9300:9300
+  kibana:
+    image: kibana:7.4.2
+    container_name: "kibana"
+    ports:
+      - "5601:5601"

@@ -1,0 +1,53 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch:7.4.2
+    container_name: "elasticsearch"
+    environment:
+      - node.name=elasticsearch
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=elasticsearch2,elasticsearch3s
+      - cluster.initial_master_nodes=elasticsearch,elasticsearch2,elasticsearch3
+      - transport.tcp.port=9300
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+      - 9300:9300
+  elasticsearch2:
+    image: elasticsearch:7.4.2
+    container_name: "elasticsearch2"
+    environment:
+      - node.name=elasticsearch2
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=elasticsearch,elasticsearch3
+      - cluster.initial_master_nodes=elasticsearch,elasticsearch2,elasticsearch3
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+  elasticsearch3:
+    image: elasticsearch:7.4.2
+    container_name: "elasticsearch3"
+    environment:
+      - node.name=elasticsearch3
+      - cluster.name=es-docker-cluster
+      - discovery.seed_hosts=elasticsearch,elasticsearch2
+      - cluster.initial_master_nodes=elasticsearch,elasticsearch2,elasticsearch3
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+  kibana:
+    image: kibana:7.4.2
+    container_name: "kibana"
+    ports:
+      - "5601:5601"
