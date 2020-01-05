@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "number_of_replicas": 0,
+    "analysis": {
+      "analyzer": {
+        "english_analyzer": {
+          "type": "custom",
+          "tokenizer": "standard",
+          "filter": [
+            "lowercase",
+            "trim",
+            "stop"
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "title": {
+        "type": "text",
+        "analyzer": "english_analyzer",
+        "fields": {
+          "autocomplete": {
+            "type": "completion",
+            "contexts": [
+              {
+                "name": "category",
+                "type": "category",
+                "path": "category"
+              }
+            ]
+          }
+        }
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "english_analyzer"
+      },
+      "content": {
+        "type": "text",
+        "analyzer": "english_analyzer"
+      }
+    }
+  }
+}

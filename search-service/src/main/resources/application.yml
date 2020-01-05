@@ -1,0 +1,16 @@
+spring:
+  data:
+    elasticsearch:
+      host: 127.0.0.1
+      cluster-name: es-docker-cluster
+      cluster-nodes: localhost:9300
+      repositories:
+        enabled: true
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          elasticsearch:
+            core: DEBUG
