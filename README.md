@@ -7,10 +7,10 @@ A news search engine based on Spring data and Elasticsearch
   <li>Filter search results based on category</li>
   <li>Autocomplete</li>
   </ul>
-    Click on the below image to watch a video of the running app
-    
-    [![Watch the video](https://github.com/amrkhaledccd/news-search/blob/master/video.png)](https://www.youtube.com/watch?v=iGoe1jlMs20)
-  
+  Click on the below image to watch a video of the running app
+   
+  [![Watch the video](https://github.com/amrkhaledccd/news-search/blob/master/video.png)](https://www.youtube.com/watch?v=iGoe1jlMs20)
+   
 # Run on Docker
 <ul>
   <li>Navigate to {project-folder}/search-service</li>
