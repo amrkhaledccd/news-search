@@ -1,0 +1,99 @@
+@import "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700";
+
+.ant-layout-header {
+  height: 123px;
+  line-height: 77px;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0;
+}
+
+.ant-menu {
+  background: none !important;
+  margin-top: -15px;
+  font-size: 13px;
+}
+
+.ant-menu-item,
+.ant-menu-submenu-title {
+  padding: 0 12px;
+}
+
+.ant-layout-content {
+  background-color: #fff;
+}
+
+.search-input {
+  width: 588px !important;
+  height: 50px !important;
+  font-size: 20px !important;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.428571429;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.thumbnail > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thumbnail:hover {
+  border-color: #428bca;
+}
+
+.ul {
+  list-style: none;
+}
+
+.ul li {
+  font: 400 normal 0.8em "Roboto", Arial, Verdana, sans-serif;
+  line-height: 30px;
+}
+
+.ul li i {
+  padding-right: 5px;
+}
+
+.meta-info {
+  border-right: 1px dotted #ccc;
+  margin-right: 20px;
+  min-height: 140px;
+}
+
+.title {
+  font: 500 normal 1.1em "Roboto", Arial, Verdana, sans-serif;
+}
+
+.title:hover {
+  text-decoration: underline;
+}
+
+.description {
+  font: normal normal 1.125em "Roboto", Arial, Verdana, sans-serif;
+}
+
+.autocomplete-icon {
+  margin-right: 20px;
+  color: #b9b4b4;
+}
+
+.ant-empty {
+  vertical-align: middle;
+  display: inline;
+}
