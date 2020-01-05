@@ -22,10 +22,10 @@ A news search engine based on Spring data and Elasticsearch
  
 # Run from IDE
 <ul>
-  li>Navigate to {project-folder}/docker</li>
+  <li>Navigate to {project-folder}/docker</li>
   <li>Run  <code>docker compose -f elastic_kibana.yaml up</code></li>
   <li>Run search-service from IDE or by typing <code>mvn spring-boot:run</code></li>
-<li>Run search-app by typeing <code>npm install</code> for the first time then type <code>npm start</code></li>
+  <li>Run search-app by typeing <code>npm install</code> for the first time then type <code>npm start</code></li>
   <li>Open a browser and type <code>http://localhost:3000</code></li>
 </ul>
 
