@@ -9,7 +9,7 @@ A news search engine based on Spring data and Elasticsearch
   </ul>
     Click on the below image to watch a video of the running app
     
-    [![Watch the video](https://raw.githubusercontent.com/amrkhaledccd/news-search/master/video.png)](https://www.youtube.com/watch?v=iGoe1jlMs20)
+    [![Watch the video](https://github.com/amrkhaledccd/news-search/blob/master/video.png)](https://www.youtube.com/watch?v=iGoe1jlMs20)
   
 # Run on Docker
 <ul>
