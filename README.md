@@ -7,6 +7,7 @@ A news search engine based on Spring data and Elasticsearch
   <li>Filter search results based on category</li>
   <li>Autocomplete</li>
   </ul>
+    Click on the below image to watch a video of the running app
   
 # Run on Docker
 <ul>
@@ -26,9 +27,6 @@ A news search engine based on Spring data and Elasticsearch
 <li>Run search-app by typeing <code>npm install</code> for the first time then type <code>npm start</code></li>
   <li>Open a browser and type <code>http://localhost:3000</code></li>
 </ul>
-
-# Video
-Click on the below image to watch a video of the running app
 
 # Data
 The indexed data is powered by https://rapidapi.com 
