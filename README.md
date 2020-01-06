@@ -14,7 +14,7 @@ A news search engine based on Spring data and Elasticsearch
 <ul>
   <li>Navigate to {project-folder}/search-service</li>
   <li>Run  <code>mvn clean install</code></li>
-  li>Navigate to {project-folder}/docker</li>
+  <li>Navigate to {project-folder}/docker</li>
   <li>Run  <code>docker compose up</code></li>
   <li>Open a browser and type <code>http://localhost:3000</code></li>
 </ul>
