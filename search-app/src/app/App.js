@@ -7,11 +7,7 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Route
-          exact
-          path="/"
-          render={props => <Home onSearch={this.handleSearch} {...props} />}
-        />
+        <Route exact path="/" render={props => <Home {...props} />} />
         <Route path="/search" render={props => <SearchResult {...props} />} />
       </Switch>
     );
